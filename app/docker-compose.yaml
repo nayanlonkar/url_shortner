@@ -1,0 +1,11 @@
+version: '3'
+services:
+  url_shortner:
+    build: .
+    environment:
+      - PORT=5000
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    entrypoint: [ "/bin/bash", "entrypoint.sh" ]
